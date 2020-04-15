@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://characters/Darc/Darcxodia v1.png" type="Texture" id=1]
+[ext_resource path="res://characters/Darc/Darc.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 213.866, 117.646 )
+extents = Vector2( 45.1386, 26.7484 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "Rest"
@@ -341,7 +342,7 @@ tracks/27/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -4.52203, -67.8302 ) ]
+"values": [ Vector2( -4.25851, -14.5991 ) ]
 }
 tracks/28/type = "value"
 tracks/28/path = NodePath("CollisionShape2D:rotation_degrees")
@@ -655,6 +656,18 @@ tracks/53/keys = {
 "update": 0,
 "values": [ Vector2( 1, 1 ) ]
 }
+tracks/54/type = "value"
+tracks/54/path = NodePath("CollisionShape2D:shape:extents")
+tracks/54/interp = 1
+tracks/54/loop_wrap = true
+tracks/54/imported = false
+tracks/54/enabled = true
+tracks/54/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 45.1386, 26.7484 ) ]
+}
 
 [sub_resource type="Animation" id=3]
 resource_name = "attack"
@@ -862,6 +875,30 @@ tracks/16/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ -81.4505 ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("CollisionShape2D:shape:extents")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 45.1386, 26.7484 ) ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("CollisionShape2D:position")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -4.25851, -14.5991 ) ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -1072,6 +1109,30 @@ tracks/16/keys = {
 "update": 0,
 "values": [ -70.9639, -71.1844 ]
 }
+tracks/17/type = "value"
+tracks/17/path = NodePath("CollisionShape2D:shape:extents")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 45.1386, 26.7484 ) ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("CollisionShape2D:position")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -4.25851, -14.5991 ) ]
+}
 
 [sub_resource type="Animation" id=5]
 resource_name = "walking"
@@ -1280,12 +1341,37 @@ tracks/16/keys = {
 "update": 0,
 "values": [ -82.5188, -74.0251 ]
 }
+tracks/17/type = "value"
+tracks/17/path = NodePath("CollisionShape2D:shape:extents")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 45.1386, 26.7484 ) ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("CollisionShape2D:position")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -4.25851, -14.5991 ) ]
+}
 
 [node name="Darc" type="KinematicBody2D"]
+script = ExtResource( 2 )
 
 [node name="polygons" type="Node2D" parent="."]
-position = Vector2( -129.87, -297.683 )
-scale = Vector2( 0.2, 0.2 )
+position = Vector2( -30.2993, -67.3417 )
+scale = Vector2( 0.045, 0.045 )
 
 [node name="hair" type="Polygon2D" parent="polygons"]
 position = Vector2( -190.19, -902.046 )
@@ -1370,9 +1456,8 @@ uv = PoolVector2Array( 231.341, 868.764, 187.402, 802.097, 160.129, 741.491, 132
 bones = [ NodePath("hip"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("hip/chest"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("hip/chest/head"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("hip/chest/head/h1"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("hip/chest/head/h1/a1"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("hip/chest/head/h1/a1/Bone2D"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("hip/chest/head/h1/a2"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("hip/chest/head/h1/a2/Bone2D"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("hip/chest/head/h1/hair"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("hip/chest/arm_left"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("hip/chest/arm_left/hand_left"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("hip/chest/arm_right"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("hip/chest/arm_right/hand_right"), PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ), NodePath("hip/leg_right"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("hip/leg_right/calf_right"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("hip/leg_left"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("hip/leg_left/calf_left"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ) ]
 
 [node name="Skeleton2D" type="Skeleton2D" parent="."]
-visible = false
-position = Vector2( -129.87, -297.683 )
-scale = Vector2( 0.2, 0.2 )
+position = Vector2( -30.2993, -67.3417 )
+scale = Vector2( 0.045, 0.045 )
 
 [node name="hip" type="Bone2D" parent="Skeleton2D"]
 position = Vector2( 679.251, 1478.05 )
@@ -1384,7 +1469,7 @@ rest = Transform2D( 1, 0, 0, 1, -16.302, -201.058 )
 
 [node name="head" type="Bone2D" parent="Skeleton2D/hip/chest"]
 position = Vector2( -70.6421, -228.229 )
-rotation = -1.53836
+rotation = -1.56354
 rest = Transform2D( 0.0324306, -0.999474, 0.999474, 0.0324306, -70.6421, -228.229 )
 default_length = 150.0
 
@@ -1394,17 +1479,18 @@ rest = Transform2D( 1, 0, 0, 1, 179.269, 0.661926 )
 
 [node name="a1" type="Bone2D" parent="Skeleton2D/hip/chest/head/h1"]
 position = Vector2( 607.916, 166 )
+rotation = 0.0538425
 rest = Transform2D( 1, 0, 0, 1, 607.916, 166 )
 
 [node name="Bone2D" type="Bone2D" parent="Skeleton2D/hip/chest/head/h1/a1"]
 position = Vector2( 275.619, 105.855 )
 rotation = 1.56009
-scale = Vector2( 1, 1 )
 rest = Transform2D( 0.0107062, 0.999943, -0.999943, 0.0107062, 275.619, 105.855 )
 default_length = 200.0
 
 [node name="a2" type="Bone2D" parent="Skeleton2D/hip/chest/head/h1"]
 position = Vector2( 552.379, -214.448 )
+rotation = -0.0317968
 rest = Transform2D( 1, 0, 0, 1, 552.379, -214.448 )
 
 [node name="Bone2D" type="Bone2D" parent="Skeleton2D/hip/chest/head/h1/a2"]
@@ -1415,37 +1501,35 @@ default_length = 150.0
 
 [node name="hair" type="Bone2D" parent="Skeleton2D/hip/chest/head/h1"]
 position = Vector2( 294.303, -177.771 )
-rotation = -3.05915
+rotation = -2.98671
 rest = Transform2D( -0.996604, -0.0823493, 0.0823493, -0.996604, 294.303, -177.771 )
 default_length = 600.0
 
 [node name="arm_left" type="Bone2D" parent="Skeleton2D/hip/chest"]
 position = Vector2( 67.4491, -172.131 )
-rotation = -1.8167
-scale = Vector2( 1, 1 )
+rotation = -1.87712
 rest = Transform2D( -0.243433, -0.969918, 0.969918, -0.243433, 67.4491, -172.131 )
 
 [node name="hand_left" type="Bone2D" parent="Skeleton2D/hip/chest/arm_left"]
 position = Vector2( -168.792, -22.7546 )
-rotation = -2.9963
+rotation = -3.08403
 rest = Transform2D( -0.989464, -0.144782, 0.144782, -0.989464, -168.792, -22.7546 )
 default_length = 300.0
 
 [node name="arm_right" type="Bone2D" parent="Skeleton2D/hip/chest"]
 position = Vector2( -217.361, -114.114 )
-rotation = -1.8167
-scale = Vector2( 1, 1 )
+rotation = -1.83169
 rest = Transform2D( -0.243433, -0.969918, 0.969918, -0.243433, -217.361, -114.114 )
 
 [node name="hand_right" type="Bone2D" parent="Skeleton2D/hip/chest/arm_right"]
 position = Vector2( -123.152, -38.4891 )
-rotation = -2.86925
+rotation = -2.92341
 rest = Transform2D( -0.963143, -0.268988, 0.268988, -0.963143, -123.152, -38.4891 )
 default_length = 300.0
 
 [node name="leg_right" type="Bone2D" parent="Skeleton2D/hip"]
 position = Vector2( -135.85, 119.548 )
-rotation = 3.089
+rotation = 3.13205
 rest = Transform2D( -0.998617, 0.0525684, -0.0525684, -0.998617, -135.85, 119.548 )
 
 [node name="calf_right" type="Bone2D" parent="Skeleton2D/hip/leg_right"]
@@ -1456,18 +1540,17 @@ default_length = 150.0
 
 [node name="leg_left" type="Bone2D" parent="Skeleton2D/hip"]
 position = Vector2( 130.416, 146.718 )
-rotation = 3.089
+rotation = 2.99963
 rest = Transform2D( -0.998617, 0.0525684, -0.0525684, -0.998617, 130.416, 146.718 )
 
 [node name="calf_left" type="Bone2D" parent="Skeleton2D/hip/leg_left"]
 position = Vector2( -17.134, -294.745 )
-rotation = -1.42158
+rotation = -1.44022
 rest = Transform2D( 0.148663, -0.988888, 0.988888, 0.148663, -17.134, -294.745 )
 default_length = 150.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2( -4.52203, -67.8302 )
+position = Vector2( -4.25851, -14.5991 )
 rotation = -1.56207
 shape = SubResource( 1 )
 
